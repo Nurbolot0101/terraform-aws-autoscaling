@@ -101,5 +101,10 @@ resource "aws_lb_target_group" "target" {
   vpc_id   = var.vpc_id
 }
 
+resource "aws_autoscaling_attachment" "asg_attachment_bar" {
+  autoscaling_group_name = aws_autoscaling_group.example.id
+  elb                    = aws_lb.nurbolot.id
+}
+
 
 #####autoscaling
