@@ -16,7 +16,10 @@ variable "ingress_ports" {
 #     type = list (string)
 #     default =[80] 
 # }
-
+variable "user_data" {
+  type = string
+  
+}
 
 variable "egress_cidr" {
     type = list (string)
